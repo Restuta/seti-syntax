@@ -5,37 +5,62 @@
 @red: rgb(205,63,69);
 @purple: rgb(160,116,196);
 
+//cusom colors
+@my-pink: #eb9a8d;
+
+@my-background:   #182229;
+@my-white:        rgba(224, 226, 228, 0.9);
+@my-dim:          #878F97;
+@my-dark-green:   #5A8731;
+@my-dark-violet:  #555588;
+@my-violet:       #B477FF;
+@my-violet-dim:   #a082bd;
+@my-blue:         #678cb1;
+@my-dark-blue:    #4C7094;
+@my-bright_blue:  #3387CC;
+@my-light_blue:   rgb(94, 189, 224);
+@my-green:        #93c763;
+@my-cyan:         #36A698;
+@my-pink:         #eb9a8d;
+@my-dark-pink:    #9D3D45;
+@my-orange:       #C56D13;
+@my-brown:        #9B703F;
+
+@old-background: rgb(21,23,24);
+
 
 // GUTTER
 @gutter-text: rgb(64,75,83);
-@gutter-text-highlight: @entity;
+@gutter-text-highlight: @blue;
 @gutter-background: rgb(14,17,18);
 @gutter-background-highlight: rgb(6,7,8);
 
 // CODE VIEW
-@code-background: rgb(21,23,24); // editor background
-@code-font: Source Code Pro;
-@code-font-color: rgb(212,215,214); // default editor text
+
+@old-background: rgb(21,23,24); // editor background
+@code-background: @my-background; // editor background
+@code-font: Monaco;
+@code-font-color: @my-white; // default editor text
 
 // SYNTAX COLORS
-@comment: rgb(65,83,91); // comments, duhr.
+@comment: #51575b; // comments, duhr.
 @comment-bg: none; // comments, duhr.
 @comment-punc: @comment;
-@string: @blue; // 'value' of var='value', "name.png" or src="name.png"
+@string: @my-pink; // 'value' of var='value', "name.png" or src="name.png"
 @constant: @red; // true of var x = true, {{}} of {{> hbs_include}}
-@variable: @green; // foo or function(foo), hbs_include of {{> hbs_include}}, http://dom.com/ of url(http://dom.com/)
+@variable: @my-blue; // foo or function(foo), hbs_include of {{> hbs_include}}, http://dom.com/ of url(http://dom.com/)
 @support: @purple; // module of module.exports, color of color: rgb(0,0,0)
-@entity: @blue; // exports of module.exports, <div id= of <div id="#id">, . of .className
-@keyword: @green; // = of var a = b, if of if a = b, px of font-size: 13px;
-@storage: @yellow; // var of var a = b;
+@entity: @my-green; // exports of module.exports, <div id= of <div id="#id">, . of .className
+@keyword: @my-blue; // = of var a = b, if of if a = b, px of font-size: 13px;
+@storage: @my-blue; // var of var a = b;
 @meta: @code-font-color; // none of border: none;
-@function-param: @blue;
+@function-param: @my-cyan;
 
 @error: @red;
 
 @regex: @string;
 
-@numeric: @red;
+@numeric: @yellow;
 @quotes: @code-font-color;
 
 @markup: @code-font-color;
