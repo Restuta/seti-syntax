@@ -4,6 +4,7 @@
 .comment {
   color: @comment;
   background: @comment-bg;
+  font-style: italic;
 }
 
 
@@ -46,10 +47,34 @@
 }
 
 
+.storage.type.function.js {
+    color: @purple;
+}
+
+.support{
+    &.constant.js {
+        color: @my-brown;
+    }
+    &.class.js{
+        color: @my-green;
+    }
+    &.function.js {
+        color: @my-brown;
+        &.console {
+            color: @my-white;
+        }
+    }
+}
+
 .constant {
 
+  &.null, &.undefined {
+      color: @my-dark-violet;
+  }
+
+
   // true, false, null, undefined
-  color: @constant;
+  color: @my-bright_blue;
 
   // \ of ("what\'s")
   &.character.escape {
@@ -90,6 +115,9 @@
   }
 }
 
+.http, .https {
+    color: @my-light_blue;
+}
 
 // INVALID TEXT
 .invalid.illegal, .invalid.deprecated {
@@ -323,7 +351,7 @@
 
   // init in init: function(){} (js)
   &.name.function {
-    color: @entity;
+    color: @my-dark-green;
   }
 
   &.name.class, &.name.type.class {
@@ -351,6 +379,8 @@
     }
   }
 }
+
+
 
 .meta {
 
@@ -394,6 +424,9 @@
 .none {
   color: @code-font-color;
 }
+
+
+
 
 .markup {
   &.bold {
