@@ -6,8 +6,6 @@
   background: @comment-bg;
   font-style: italic;
 }
-
-
 .keyword {
 
   // @ of @font-face & @media
@@ -34,7 +32,6 @@
   }
 }
 
-
 // STORAGE |
 .storage {
   color: @storage;
@@ -43,35 +40,29 @@
   &.modifier {
     color: @storage;
   }
-
 }
-
-
 .storage.type.function.js {
-    color: @purple;
+  color: @purple;
 }
-
-.support{
-    &.constant.js {
-        color: @my-brown;
-    }
-    &.class.js{
-        color: @my-green;
-    }
-    &.function.js {
-        color: @my-brown;
-        &.console {
-            color: @my-white;
-        }
-    }
-}
-
-.constant {
-
-  &.null, &.undefined {
-      color: @my-dark-violet;
+.support {
+  &.constant.js {
+    color: @my-brown;
   }
-
+  &.class.js {
+    color: @my-green;
+  }
+  &.function.js {
+    color: @my-brown;
+    &.console {
+      color: @my-white;
+    }
+  }
+}
+.constant {
+  &.null,
+  &.undefined {
+    color: @my-dark-violet;
+  }
 
   // true, false, null, undefined
   color: @my-bright_blue;
@@ -96,9 +87,6 @@
     color: @constant;
   }
 }
-
-
-
 .variable {
 
   // this (js), @varable_name (sass), http://web.com of url(http://web.com), variable of {{variable}} (handlebars)
@@ -114,19 +102,18 @@
     color: @function-param;
   }
 }
-
-.http, .https {
-    color: @my-light_blue;
+.http,
+.https {
+  color: @my-light_blue;
 }
 
 // INVALID TEXT
-.invalid.illegal, .invalid.deprecated {
+.invalid.illegal,
+.invalid.deprecated {
   background: none;
   color: @error;
 }
-
 .string {
-
   .json {
 
   }
@@ -138,30 +125,24 @@
   .constant {
     color: @regex;
   }
-
   &.regexp {
 
     // ?:input, select, textarea, button of  /^(?:input|select|textarea|button)$/i,
     color: @regex;
-
     .constant.character.escape,
     .source.ruby.embedded,
     .string.regexp.arbitrary-repitition {
       color: @regex;
     }
-
     &.group {
       color: @regex;
     }
-
     &.character-class {
       color: @regex;
     }
-
     .source.ruby.embedded {
       color: @regex;
     }
-
   }
 
   // site.dir in {{site.dir}}
@@ -181,31 +162,24 @@
   .meta.embedded.line {
     color: @string;
   }
-
   .punctuation.section.embedded {
     color: @string;
-
     .source {
-      color: @string;  // Required for the end of embedded strings in Ruby # 716
+      color: @string; // Required for the end of embedded strings in Ruby # 716
     }
   }
 }
 
 // MISC PUNCTUATION
 .punctuation {
-
   &.terminator {
     color: @punctuation;
   }
-
   &.separator {
     color: @punctuation;
   }
-
   &.definition {
-
     color: @punctuation;
-
     &.comment {
       color: @comment-punc;
     }
@@ -216,35 +190,26 @@
     &.array {
       color: @string;
     }
-
     &.parameters {
       color: @code-font-color;
     }
-
     &.heading,
     &.identity {
       color: @code-font-color;
     }
-
     &.bold {
       color: @code-font-color;
       font-weight: bold;
     }
-
     &.italic {
       color: @code-font-color;
       font-style: italic;
     }
   }
-
   &.section.embedded {
     color: @code-font-color;
   }
-
 }
-
-
-
 .support {
 
   // background of background: none,
@@ -254,10 +219,8 @@
   &.class {
     color: @support;
   }
-
-  &.function  {
+  &.function {
     color: @support; // .log of console.log, url of url(http://web.com)
-
     // can't tell what this does :/
     &.any-method {
       color: @support;
@@ -266,44 +229,37 @@
 
   // {{}} of {{ variable }}
   &.constant {
-    color: @constant;  // none of text-decoration: none;
+    color: @constant; // none of text-decoration: none;
   }
-
   &.type.property-name.css {
     color: @support;
   }
 }
 
 // .class names in css & scss
-.source .entity.name.tag, .source .entity.other.attribute-name, .meta.tag.inline, .meta.tag.inline .entity {
+.source .entity.name.tag,
+.source .entity.other.attribute-name,
+.meta.tag.inline,
+.meta.tag.inline .entity {
   color: @class;
 }
-
-  &.tag,
-  &.tag .entity {
-    color: @tag-entity;
-  }
-
-
+&.tag,
+&.tag .entity {
+  color: @tag-entity;
+}
 .html {
-
   .string {
     color: @code-font-color;
   }
 
-
   // inline elements - <span>
   .meta {
 
-
   }
-
   .punctuation.definition.tag {
     color: @tag;
   }
-
   .entity {
-
     &.name.tag {
       text-decoration: done;
 
@@ -319,24 +275,20 @@
 
       // inline elements - <span>
       &.script {
+
         // color: @tag;
       }
-
     }
-
     &.other {
       &.attribute-name {
         color: @element-attr;
       }
     }
-
   }
-
 }
 
 // ENTITY | exports of module.exports, <div id= of <div id="#id">, . of .className
 .entity {
-
   color: @entity;
 
   // console of console.log (js)
@@ -344,20 +296,18 @@
     color: @entity;
     text-decoration: none;
   }
-
   &.other.inherited-class {
     color: @entity;
   }
 
   // init in init: function(){} (js)
   &.name.function {
-    color: @my-dark-green;
+    color: @bright-white;
   }
-
-  &.name.class, &.name.type.class {
+  &.name.class,
+  &.name.type.class {
     color: @entity;
   }
-
   &.name.section {
     color: @entity;
   }
@@ -367,7 +317,6 @@
     color: @tag;
     text-decoration: done;
   }
-
 
   // CSS CLASSES
   &.other.attribute-name {
@@ -379,20 +328,13 @@
     }
   }
 }
-
-
-
 .meta {
-
   &.link {
     color: @meta;
   }
-
   &.require {
     color: @meta;
   }
-
-
   &.brace {
 
     // curly braces - {}
@@ -405,7 +347,6 @@
       color: @code-font-color;
     }
   }
-
   &.comma {
     color: @punctuation;
   }
@@ -414,70 +355,54 @@
   &.selector {
     color: @punctuation;
   }
-
   &.separator {
     background-color: @punctuation;
     color: @punctuation;
   }
 }
-
 .none {
   color: @code-font-color;
 }
-
-
-
-
 .markup {
   &.bold {
     color: @markup;
     font-weight: bold;
   }
-
   &.changed {
     color: @markup;
   }
-
   &.deleted {
     color: @markup;
   }
-
   &.italic {
     color: @markup;
     font-style: italic;
   }
-
   &.heading .punctuation.definition.heading {
     color: @markup;
   }
-
   &.inserted {
     color: @markup;
   }
-
   &.list {
     color: @markup;
   }
-
   &.quote {
     color: @markup;
   }
-
   &.raw.inline {
     color: @markup;
   }
 }
-
 .source.gfm .markup {
   -webkit-font-smoothing: auto;
   &.heading {
     color: @code-font-color;
   }
 }
-
-
-atom-text-editor[mini], :host(.mini) {
- .scroll-view {
+atom-text-editor[mini],
+:host(.mini) {
+  .scroll-view {
     padding-left: 1px;
   }
 }

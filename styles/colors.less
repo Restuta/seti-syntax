@@ -10,16 +10,20 @@
 
 @my-background:   #182229;
 @my-white:        rgba(224, 226, 228, 0.9);
+@bright-white:    #fff;
 @my-dim:          #878F97;
 @my-dark-green:   #5A8731;
 @my-dark-violet:  #555588;
 @my-violet:       #B477FF;
 @my-violet-dim:   #a082bd;
 @my-blue:         #678cb1;
+@my-blue-light:   #A2AEE4;
+
 @my-dark-blue:    #4C7094;
 @my-bright_blue:  #3387CC;
 @my-light_blue:   rgb(94, 189, 224);
 @my-green:        #93c763;
+@my-green-bright: #5A9F5B;
 @my-cyan:         #36A698;
 @my-pink:         #eb9a8d;
 @my-dark-pink:    #9D3D45;
@@ -47,7 +51,7 @@
 @comment-bg: none; // comments, duhr.
 @comment-punc: @comment;
 @string: @my-pink; // 'value' of var='value', "name.png" or src="name.png"
-@constant: @red; // true of var x = true, {{}} of {{> hbs_include}}
+@constant: lighten(@red, 10%); // true of var x = true, {{}} of {{> hbs_include}}
 @variable: @my-blue; // foo or function(foo), hbs_include of {{> hbs_include}}, http://dom.com/ of url(http://dom.com/)
 @support: @purple; // module of module.exports, color of color: rgb(0,0,0)
 @entity: @my-green; // exports of module.exports, <div id= of <div id="#id">, . of .className
@@ -76,12 +80,12 @@
 @selected-line: rgba(0,0,0,0.2);
 
 // HTML
-@tag: @blue;
-@tag-entity: @blue;
-@element-attr: @green;
-@class: @green;
-@id: @green;
-@block: @blue;
+@tag: @my-blue;
+@tag-entity: @my-blue;
+@element-attr: @my-blue-light;
+@class: @my-blue;
+@id: @my-blue-light;
+@block: @my-blue;
 @inline: lighten(@blue, 25%);
 
 @entity-function: @blue;

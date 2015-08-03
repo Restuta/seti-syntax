@@ -1,9 +1,18 @@
 @import "colors";
 
 .html {
+  .doctype {
+    color: @my-dim;
+  }
+
+
+  .link, .hyperlink {
+    color: darken(@string, 10%);
+    text-decoration: underline;
+  }
 
   .meta.tag.any {
-    color: @green;
+    color: @my-blue-light;
   }
 
   .entity.name.tag {
@@ -12,24 +21,38 @@
     }
   }
 
-  .entity.other.attribute-name.id.html {
-    color: @id;
+  .attribute-with-value.id {
+    .punctuation.separator.key-value {
+      color: @my-violet-dim ;
+    }
+    .attribute-name {
+      color: @my-violet-dim;
+    }
+    .string.quoted {
+      .punctuation.string {
+        color: @my-dark-violet !important;
+      }
+      color: @my-dark-violet;
+    }
   }
 
+
+
+
   .punctuation.separator.key-value {
-    color: @green;
+    color: @my-blue-light;
   }
 
   .string.quoted.double {
-    color: lighten(@green, 20%);
+    color: @string;
 
     .punctuation.definition.string {
       &.begin, &.end {
-        color: @green;
+        color: @string;
       }
 
       .separator.key-value.html {
-        color: @green;
+        color: @string;
       }
 
     }

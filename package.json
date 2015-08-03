@@ -1,11 +1,20 @@
 {
-  "name": "seti-syntax",
+  "name": "seti-syntax-restuta",
   "theme": "syntax",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Seti Syntax - A subtle dark colored theme for Atom.",
-  "repository": "https://github.com/jesseweed/seti-syntax",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Restuta/seti-syntax"
+  },
   "license": "MIT",
   "engines": {
     "atom": ">0.170.0"
-  }
+  },
+  "readme": "",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/Restuta/seti-syntax/issues"
+  },
+  "homepage": "https://github.com/Restuta/seti-syntax"
 }
