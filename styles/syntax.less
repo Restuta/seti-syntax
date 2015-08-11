@@ -337,14 +337,15 @@
   }
   &.brace {
 
-    // curly braces - {}
-    &.curly {
-      color: @brackets;
-    }
-
-    // parenthesis - ()
     &.round {
       color: @code-font-color;
+    }
+
+
+    &.curly,
+    &.square {
+      color: @code-font-color;
+      color: @brackets;
     }
   }
   &.comma {
