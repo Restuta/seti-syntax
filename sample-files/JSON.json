@@ -4,5 +4,16 @@
     "dependencies": {
         "backbone": "latest",
         "requirejs": "2.1.1"
+    },
+    "mega-nesting" : {
+    // Strict mode
+    "strict": [2, "never"],
+      "level-1" : "sdf",
+        "level-2" : {
+          "level-3:" : {
+            "test": "bla"
+          }
+        }
+      }
     }
 }

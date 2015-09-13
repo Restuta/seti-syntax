@@ -1,31 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Jade</title>
-    <script type="text/javascript">
-      var foo = false;
-      if (foo) {
-        var bar = 6;
-        return bar;
-      }
-      var arr = [
-        'item1',
-        'item2'
-      ];
 
-      var str = 'string';
-    </script>
-  </head>
-  <body>
-    <h1>Jade - node template engine</h1>
-    <div id="container" class="col">
-      <p>You are amazing</p>
-      <p>
-        Jade is a terse and simple
-        templating language with a
-        strong focus on performance
-        and powerful features.
-      </p>
+<head>
+  <title>Jade</title>
+  <script type="text/javascript">
+    var foo = false;
+    if (foo) {
+      var bar = 6;
+      return bar;
+    }
+    var arr = [
+      'item1',
+      'item2'
+    ];
+
+    var str = 'string';
+  </script>
+
+  <script>
+    var source = $("#vertical-logos-1").html();
+    var template = Handlebars.compile(source);
+    var logos1 = [
+      'svgs/4-wheels-narrow.svg',
+      'svgs/4-wheels.svg',
+      'svgs/1-wheel-red-decole.svg'
+    ];
+
+    var logos2 = [
+      'svgs/chainrings.svg',
+      'svgs/3x4 wheels.svg',
+      'svgs/3-wheels.svg'
+    ];
+
+    var logos3 = [
+      'svgs/3-wheels-straight.svg',
+      'svgs/4-wheels-narrow-inverted.svg',
+      // 'svgs/3-wheels.svg'
+    ];
+
+    $(function() {
+      $('.horizontal')
+        .append(template({
+          logos: logos1
+        }))
+        .append(template({
+          logos: logos2
+        }))
+        .append(template({
+          logos: logos3
+        }));
+    });
+  </script>
+
+  <div class="row row-margin-bottom">
+    {{#each logos as |logo|}}
+    <div class="col-sm-4">
+      <div class="row">
+        <div class="col-sm-6">
+          <a class="thumbnail logo logo-128 pull-left" href="#">
+            <img class="img-responsive" src="{{logo}}" alt="">
+          </a>
+        </div>
+        <div class="col-sm-6">
+          <a class="thumbnail logo logo-64 pull-left" href="#">
+            <img class="img-responsive" src="{{logo}}" alt="">
+          </a>
+        </div>
+      </div>
     </div>
-  </body>
+    {{/each}}
+  </div>
+
+</head>
+
+<body>
+  <h1>Jade - node template engine</h1>
+  <div id="container" class="col">
+    <p>You are amazing</p>
+    <p>
+      Jade is a terse and simple templating language with a strong focus on performance and powerful features.
+    </p>
+  </div>
+</body>
+
 </html>

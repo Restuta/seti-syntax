@@ -1,52 +1,71 @@
 @import "colors";
-
-
-.source.json {
-
-  .constant.language {
+.source.json {.constant.language {
     color: @constant;
   }
-
-  .meta.structure.dictionary.json {
-
-    .string.quoted.json {
+  .meta.structure.dictionary.json {.string.quoted.json {
       color: @string;
     }
-
     .meta.structure.dictionary.value.json {
+
       // background-color: pink;
       .string.quoted.json {
         color: @code-font-color;
-
         .punctuation.definition.string {
           color: @code-font-color;
         }
       }
-
       .meta.structure.dictionary.json {
-        // background-color: yellow;
 
+        // background-color: yellow;
+        //level-1
         .string.quoted.json {
           color: darken(@string, 10%);
-
           .punctuation.definition.string {
             color: darken(@string, 10%);
           }
         }
-
         .meta.structure.dictionary.value.json {
-            // background-color: orange;
+
+          // background-color: orange;
+          .string.quoted.json {
+            color: @code-font-color;
+            .punctuation.definition.string {
+              color: @code-font-color;
+            }
+          }
+
+          .meta.structure.dictionary.value.json {
 
             .string.quoted.json {
-              color: @code-font-color;
+              color: @green;
+            }
+          }
+
+          .meta.structure.dictionary.json {
+
+            //level-2
+            .string.quoted.json {
+              color: darken(@string, 15%);
 
               .punctuation.definition.string {
-                color: @code-font-color;
+                color: darken(@string, 15%);
               }
             }
+
+            .meta.structure.dictionary.json {
+              //level-3
+              .string.quoted.json {
+                color: darken(@string, 20%);
+
+                .punctuation.definition.string {
+                  color: darken(@string, 20%);
+                }
+              }
+            }
+          }
         }
+
       }
     }
-
   }
 }

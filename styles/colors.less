@@ -8,6 +8,25 @@
 //cusom colors
 @my-pink: #eb9a8d;
 
+//colors from Oceanic Next color theme https://github.com/voronianski/oceanic-next-color-scheme
+@oceanic-gray:    #1B2B34;
+@oceanic-gray-1:  #343D46;
+@oceanic-gray-2:  #4F5B66;
+@oceanic-gray-3:  #65737E;
+@oceanic-gray-4:  #A7ADBA;
+@oceanic-gray-5:  #C0C5CE;
+@oceanic-gray-6:  #CDD3DE;
+@oceanic-gray-7:  #D8DEE9;
+@oceanic-red:     #EC5f67;
+@oceanic-orange:  #F99157;
+
+@oceanic-yellow:  #FAC863;
+@oceanic-green:   #99C794;
+@oceanic-cyan:    #5FB3B3;
+@oceanic-blue:    #6699CC;
+@oceanic-violet:  #C594C5;
+@oceanic-brown:   #AB7967;
+
 //@my-background:   #182229;
 @my-background: rgb(28, 31, 33);
 @my-white:        rgba(224, 226, 228, 0.9);
@@ -30,6 +49,7 @@
 @my-dark-pink:    #9D3D45;
 @my-orange:       #C56D13;
 @my-brown:        #9B703F;
+@my-yellow:       #FAC863;
 
 @old-background: rgb(21,23,24);
 
@@ -53,7 +73,7 @@
 @comment-punc: @comment;
 @string: @my-pink; // 'value' of var='value', "name.png" or src="name.png"
 @constant: lighten(@red, 10%); // true of var x = true, {{}} of {{> hbs_include}}
-@variable: @my-blue; // foo or function(foo), hbs_include of {{> hbs_include}}, http://dom.com/ of url(http://dom.com/)
+@variable: @code-font-color; // foo or function(foo), hbs_include of {{> hbs_include}}, http://dom.com/ of url(http://dom.com/)
 @support: @purple; // module of module.exports, color of color: rgb(0,0,0)
 @entity: @my-green; // exports of module.exports, <div id= of <div id="#id">, . of .className
 @keyword: @my-blue; // = of var a = b, if of if a = b, px of font-size: 13px;

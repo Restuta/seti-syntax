@@ -1,0 +1,26 @@
+@import "colors";
+
+
+.js.jsx {
+  .tag {
+    color: @code-font-color;
+  }
+
+  .tag.open,
+  .tag.close, {
+    color: @oceanic-red;
+    //color: @my-green-bright;
+  }
+
+  .punctuation.definition.tag {
+    color: lighten(@my-background, 25%);
+  }
+
+  .meta.tag.jsx {
+    .entity.other.attribute-name.jsx {
+      color: @oceanic-cyan;
+      font-style: normal;
+    }
+  }
+
+}

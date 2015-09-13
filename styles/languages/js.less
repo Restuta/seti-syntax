@@ -1,0 +1,25 @@
+//partially migrated js styles from syntax.less
+@import "colors.less";
+.js {.keyword.module {
+    color: @my-dark-violet;
+  }
+  .variable.language.this {
+    color: @keyword;
+  }
+  .storage.type.function.js {
+    color: @purple;
+  }
+  .support.type.object.node.js,
+  .support.module.node.js {
+    color: @my-green-bright;
+  }
+  .meta.function.method.js,
+  .meta.function.json.js {.variable.other.readwrite.js {
+      color: @my-cyan;
+    }
+  }
+  .constant.other.object.key.js {.string.unquoted.js {
+      color: @code-font-color;
+    }
+  }
+}
