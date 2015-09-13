@@ -1,8 +1,76 @@
-{{> header}}
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-logo" href="#">
+        {{#if attrs.call}}
+          {{inline-svg "logo" class="logo"}}
+        {{else}}
+          {{inline-svg "logo" class="logo inactive"}}
+        {{/if}}
+      </a>
+    </div>
 
-  <section class="content">
-    <h1>Hello!</h1>
-    <h3>Welcome to <span class="app-name">{{site.name}}</span></h3>
-  </section>
+    <ol class="nav navbar-nav navbar-main">
 
-{{> footer}}
+      {{#if attrs.call}}
+        {{#each attrs.steps as |step|}}
+          <li class="{{if step.isCurrent 'active' ''}} {{if step.isComplete 'completed' ''}}">
+            {{#link-to step.route}}{{step.name}}{{/link-to}}
+          </li>
+        {{/each}}
+      {{else}}
+        <li><p class="navbar-text ">No active call</p></li>
+      {{/if}}
+    </ol>
+
+    {{#if attrs.call}}
+      <ul class="nav navbar-nav navbar-right">
+
+        <!-- offers -->
+        <li class="navbar-offers-content">
+          {{select-offer currentOffer=attrs.call.offer offers=attrs.offers selectOffer="selectOffer" }}
+        </li>
+
+        <!-- call info -->
+        <li class="dropdown phone-info-button">
+          <a id="btn-call-info" href="#" {{action 'toggleCallInfo'}} class="dropdown-toggle" data-toggle="dropdown" role="button"
+             aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-phone-square"></i>
+            <span class="caret"></span>
+          </a>
+        </li>
+      </ul>
+    {{/if}}
+
+    {{yield}}
+  </div>
+</nav>
+
+{{#if shouldShowCallInfo}}
+  {{#modal-dialog container-class="call-info-modal"
+  targetAttachment="bottom right"
+  attachment="top right"
+  alignmentTarget="#btn-call-info"
+  hasOverlay=false
+  translucentOverlay=false}}
+    <span class="list-group-item list-group-item-header text-center"><i class="fa fa-phone"></i> Call</span>
+    <ul class="list-group">
+      <li class="list-group-item">Call ID: <span class="label label-primary item-value">{{attrs.call.id}}</span></li>
+      <li class="list-group-item">Partner Name: <span class="label label-info item-value">{{attrs.call.partnerName}}</span></li>
+    </ul>
+
+    <span class="list-group-item list-group-item-header text-center"><i class="fa fa-user"></i> Caller</span>
+    <ul class="list-group">
+      <li class="list-group-item">Phone: <span class="label label-default item-value">{{attrs.call.phoneNumber}}</span></li>
+      <li class="list-group-item">PIN: <span class="label label-default item-value">{{attrs.call.pin}}</span></li>
+      <li class="list-group-item">Email: <span class="pull-right item-value">{{attrs.call.email}}</span></li>
+    </ul>
+
+    <span class="list-group-item list-group-item-header text-center"><i class="fa fa-user-secret"></i> Agent</span>
+    <ul class="list-group">
+      <li class="list-group-item">Operator ID: <span class="label label-default item-value">{{attrs.call.operatorId}}</span></li>
+      <li class="list-group-item">Agent ID: <span class="label label-default item-value">{{attrs.call.agentId}}</span></li>
+      <li class="list-group-item">Agent Name: <span class="pull-righ item-value">{{attrs.call.agentName}}</span></li>
+    </ul>
+  {{/modal-dialog}}
+{{/if}}
