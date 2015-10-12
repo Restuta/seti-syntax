@@ -1,15 +1,20 @@
 @import "colors";
-
 .source.css,
+.source.sass,
+.source.scss,
 .source.css.less {
-  .variable {
-    color: @my-cyan;  
+
+  .keyword.other.unit.scss {
+    color: @yellow;
+    // opacity: 0.5;
   }
 
+  .variable {
+    color: @my-cyan;
+  }
   .selector .tag {
     color: @my-blue;
   }
-
   .selector.class,
   .property-list.class,
   .attribute-name.class {
@@ -18,11 +23,13 @@
     }
     color: @my-brown;
   }
-
-  .property-list {
-    .property-name {
-      color: @my-green-bright;
-    }
+  .support.type.property-name.css,
+  .support.type.property-name.sass,
+  .support.type.property-name.scss,
+  .support.type.property-name.less {
+    color: @my-green-bright;
   }
-
+  .entity.other.attribute-name.pseudo-class {
+    color: @my-dark-violet;
+  }
 }

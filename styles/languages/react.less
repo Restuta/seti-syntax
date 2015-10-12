@@ -6,21 +6,43 @@
     color: @code-font-color;
   }
 
+
+
+  /*  here and below
+      first selector covers "language-babel" package
+      second selector covers "react" package  */
   .tag.open,
-  .tag.close, {
+  .tag.open .entity.name.tag.js {
     color: @oceanic-red;
     //color: @my-green-bright;
+  }
+
+  .tag.close,
+  .tag.closed .entity.name.tag.js {
+    color: fadeout(@oceanic-red, 0%);;
+    //color: @oceanic-red;
   }
 
   .punctuation.definition.tag {
     color: lighten(@my-background, 25%);
   }
 
-  .meta.tag.jsx {
-    .entity.other.attribute-name.jsx {
+  .meta.tag.jsx,
+  .meta.tag.js {
+    .entity.other.attribute-name.jsx,
+    .entity.other.attribute-name.js {
       color: @oceanic-cyan;
       font-style: normal;
     }
+  }
+
+  .entity.name.function.js {
+
+  }
+
+
+  .constant.other.js {
+    color: @code-font-color;
   }
 
 }
