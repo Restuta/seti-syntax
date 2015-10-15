@@ -23,6 +23,31 @@ html(lang="en")
     
     //- block for dynamic content
     block dynamic-content
+      
+      section
+        h2 But first, let's talk about <span class="pink">reasons</span>
+        ul
+            li Why am I doing this talk?
+            li <strike>I want to share my excitement</strike>
+            li <strike>I belive Slack is a better way of <span class="cyan">working</span></strike>
+            li Because I 
+             +icon("fa-heart-o red")
+             |  Slack?
+
+      section(data-bespoke-state='emphatic background-pink') 
+        h1(style="color: white") No<span style="color:black;">!</span>
+
+
+      section
+        h2 Slack is killing email
+        iframe(width='560' height='315' src="//www.youtube.com/embed/MHdYIYe_Dko" frameborder='0' allowfullscreen)    
+
+      section(data-bespoke-state='emphatic background-cyan')
+        h2(style="color: rgba(255, 255, 255, 0.5)") They do <span class="orange">amazing</span> things
+        iframe(src="//player.vimeo.com/video/114657199" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)  
+
+      section(data-bespoke-state='emphatic background-red') 
+        h2(style="color: rgba(255, 255, 255, 0.5)") More <span class="white">FYI</span>s
     
     ul
       li item 1
