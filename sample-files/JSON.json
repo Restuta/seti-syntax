@@ -1,19 +1,19 @@
 {
-    "name":  "MyProject",
-    "version": 0.0.1,
-    "dependencies": {
-        "backbone": "latest",
-        "requirejs": "2.1.1"
-    },
-    "mega-nesting" : {
+  "name": "MyProject",
+  "version": 0.0.1,
+  "dependencies": {
+    "backbone": "latest",
+    "requirejs": "2.1.1"
+  },
+  "mega-nesting": {
     // Strict mode
     "strict": [2, "never"],
-      "level-1" : "sdf",
-        "level-2" : {
-          "level-3:" : {
-            "test": "bla"
-          }
-        }
+    "level-1": "sdf",
+    "level-2.1": "value",
+    "level-2": {
+      "level-3:": {
+        "test": "bla"
       }
     }
+  }
 }

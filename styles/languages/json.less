@@ -42,7 +42,6 @@
           }
 
           .meta.structure.dictionary.json {
-
             //level-2
             .string.quoted.json {
               color: darken(@string, 15%);
@@ -59,6 +58,14 @@
 
                 .punctuation.definition.string {
                   color: darken(@string, 20%);
+                }
+              }
+              .meta.structure.dictionary.value.json {
+                .string.quoted.json {
+                  color: @code-font-color;
+                  .punctuation.definition.string {
+                    color: @code-font-color;
+                  }
                 }
               }
             }

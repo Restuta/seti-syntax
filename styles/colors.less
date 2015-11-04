@@ -5,8 +5,6 @@
 @red: rgb(205,63,69);
 @purple: rgb(160,116,196);
 
-//cusom colors
-@my-pink: #eb9a8d;
 
 //colors from Oceanic Next color theme https://github.com/voronianski/oceanic-next-color-scheme
 @oceanic-gray:    #1B2B34;
@@ -27,8 +25,11 @@
 @oceanic-violet:  #C594C5;
 @oceanic-brown:   #AB7967;
 
+//cusom colors
 //@my-background:   #182229;
+@old-background: rgb(21,23,24);
 @my-background: rgb(28, 31, 33);
+//@my-background: @old-background;
 @my-white:        rgba(224, 226, 228, 0.9);
 @bright-white:    #fff;
 @my-dim:          #878F97;
@@ -51,7 +52,7 @@
 @my-brown:        #9B703F;
 @my-yellow:       #FAC863;
 
-@old-background: rgb(21,23,24);
+
 
 
 // GUTTER
@@ -74,6 +75,7 @@
 @string: @my-pink; // 'value' of var='value', "name.png" or src="name.png"
 @constant: lighten(@red, 10%); // true of var x = true, {{}} of {{> hbs_include}}
 @variable: @code-font-color; // foo or function(foo), hbs_include of {{> hbs_include}}, http://dom.com/ of url(http://dom.com/)
+
 @support: @purple; // module of module.exports, color of color: rgb(0,0,0)
 @entity: @my-green; // exports of module.exports, <div id= of <div id="#id">, . of .className
 @keyword: @my-blue; // = of var a = b, if of if a = b, px of font-size: 13px;
