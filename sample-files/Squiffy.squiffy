@@ -1,0 +1,33 @@
+@title My Amazing Interactive Story
+
+Ты проснулась рано утром и обнаружила, что что-то не так. [[Осмотреться]]
+
+[[Осмотреться]]:
+Обычное хмурое утро.
+
+[Посмотреть в окно] [Поесть хурму] [Подумать]
+
+
+[Посмотреть в окно]:
+Тебе открылся красивый вид на санфранциско, ты долго смотрела в даль и заметила на полу [[записку]].
+
+[Поесть хурму]:
+Хурмы дома не оказалось и как только тебе пришло это в голову?
+
+[[записку]]:
+
+Привет, это Фиби. <div>bla</div>
+
+In addition to sections, Squiffy has the concept of passages. These are sections of text that don't advance the story. For example, you can click this [passage link], and this [other passage link], but the story won't advance until you click this [[section link]].
+
+[passage link]:
+
+This is the text for the first passage link.
+
+[other passage link]:
+
+This is the text for the second passage link.
+
+[[section link]]:
+
+When a new section appears, any unclicked passage links from the previous section are disabled.
