@@ -18,14 +18,16 @@
       first selector covers "language-babel" package
       second selector covers "react" package  */
   .tag.open,
-  .tag.open .entity.name.tag.js {
+  .tag.open .entity.name.tag.js,
+  .support.class.component.open.jsx {
     color: @oceanic-red;
     //color: @my-green-bright;
   }
 
   .tag.close,
-  .tag.closed .entity.name.tag.js {
-    color: fadeout(@oceanic-red, 0%);;
+  .tag.closed .entity.name.tag.js,
+  .support.class.component.close.jsx {
+    color: fadeout(@oceanic-red, 0%);
     //color: @oceanic-red;
   }
 
