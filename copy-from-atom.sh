@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #copies theme files from atom package folder
-ATOM_PACKAGES_DIR="~/.atom/packages/seti-syntax"
+ATOM_PACKAGES_DIR=~/.atom/packages/seti-syntax
 
 SAMPLE_FILES_DIR="$ATOM_PACKAGES_DIR/sample-files"
 STYLES_DIR="$ATOM_PACKAGES_DIR/styles"
