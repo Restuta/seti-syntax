@@ -3,7 +3,9 @@ var app = koa();
 
 // x-response-time
 
-app.use(function *(next){
+function helloWorld() {}
+
+app.use(function*(next) {
   var start = new Date();
   yield next;
   var ms = new Date() - start;
@@ -12,7 +14,7 @@ app.use(function *(next){
 
 // logger
 
-app.use(function *(next){
+app.use(function*(next) {
   var start = new Date();
   yield next;
   var ms = new Date() - start;
@@ -21,7 +23,7 @@ app.use(function *(next){
 
 // response
 
-app.use(function *(){
+app.use(function*() {
   this.body = 'Hello World';
 });
 
@@ -29,8 +31,8 @@ app.listen(3000);
 
 /*! React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
 
-import { join } from 'path';
-import { Router } from 'express';
+import {join} from 'path';
+import {Router} from 'express';
 import jade from 'jade';
 import fm from 'front-matter';
 import fs from '../utils/fs';
@@ -42,7 +44,7 @@ const CONTENT_DIR = join(__dirname, './content');
 const parseJade = (path, jadeContent) => {
   const fmContent = fm(jadeContent);
   const htmlContent = jade.render(fmContent.body);
-  return Object.assign({ path, content: htmlContent }, fmContent.attributes);
+  return Object.assign({path, content: htmlContent}, fmContent.attributes);
 };
 
 const router = new Router();
@@ -52,11 +54,16 @@ router.get('/', async (req, res, next) => {
     let path = req.query.path;
 
     if (!path || path === 'undefined') {
-      res.status(400).send({error: `The 'path' query parameter cannot be empty.`});
+      res
+        .status(400)
+        .send({error: `The 'path' query parameter cannot be empty.`});
       return;
     }
 
-    let fileName = join(CONTENT_DIR, (path === '/' ? '/index' : path) + '.jade');
+    let fileName = join(
+      CONTENT_DIR,
+      (path === '/' ? '/index' : path) + '.jade'
+    );
     if (!await fs.exists(fileName)) {
       fileName = join(CONTENT_DIR, path + '/index.jade');
     }
@@ -64,7 +71,7 @@ router.get('/', async (req, res, next) => {
     if (!await fs.exists(fileName)) {
       res.status(404).send({error: `The page '${path}' is not found.`});
     } else {
-      const source = await fs.readFile(fileName, { encoding: 'utf8' });
+      const source = await fs.readFile(fileName, {encoding: 'utf8'});
       const content = parseJade(path, source);
       res.status(200).send(content);
     }
