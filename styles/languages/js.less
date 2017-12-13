@@ -21,13 +21,29 @@
   .meta.function.json.js,
   .meta.function-call {
     .variable.other.readwrite.js {
-      color: @my-cyan;
+      // color: @my-cyan;
     }
   }
+
+  .syntax--meta.syntax--function.syntax--parameters.syntax--js > .syntax--variable,
+  // .syntax--method-call.syntax--with-arguments > .syntax--variable,
+  // .syntax--function-cal.syntax--with-arguments > .syntax--variable
+   {
+    color: @my-cyan;
+  }
+
+  // object properties
   .constant.other.object.key.js {
-    .string.unquoted.js {
-      color: @code-font-color;
+    .string.unquoted.js,
+    .string.quoted.js,
+    .string.quoted.js .punctuation {
+      color: @oceanic-green;
     }
+  }
+
+  // object short properties
+  .variable.other.readwrite.shorthandpropertyname.js {
+    color: @oceanic-green;
   }
 
   .syntax--entity.syntax--name.syntax--function {

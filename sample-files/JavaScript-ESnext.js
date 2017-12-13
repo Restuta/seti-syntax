@@ -366,4 +366,9 @@ var fullEventData = eventData.map(function(event) {
   return newObject;
 });
 
-const x = () => <div>hello workd </div>;
+import React from 'react';
+
+const renderFoo = () => <div>hello workd </div>;
+
+
+renderFoo();
