@@ -1,3 +1,5 @@
+'use strict'
+
 var koa = require('koa');
 var app = koa();
 
@@ -39,6 +41,21 @@ import fs from '../utils/fs';
 
 // A folder with Jade/Markdown/HTML content pages
 const CONTENT_DIR = join(__dirname, './content');
+
+const x = () => () => {
+  const x = y
+}
+
+function foo(y) {
+  const x = y
+
+  return {
+    bla: x,
+    y,
+    'hello': x,
+    
+  }
+}
 
 // Extract 'front matter' metadata and generate HTML
 const parseJade = (path, jadeContent) => {
